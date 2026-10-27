@@ -1,0 +1,70 @@
+:root {
+  --bg: #f3faf8;
+  --panel: #ffffff;
+  --line: #d7e9e4;
+  --text: #1e2a2f;
+  --muted: #6b7b81;
+  --primary: #2f8f80;
+  --accent: #4c8be0;
+  --link: #2a6fc4;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1719;
+    --panel: #172326;
+    --line: #26393d;
+    --text: #e4eeec;
+    --muted: #9aaaae;
+    --primary: #5cc5b3;
+    --accent: #7eaef0;
+    --link: #8cc0ff;
+  }
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.8 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+main { max-width: 44rem; margin: 0 auto; padding: 32px 16px 64px; }
+section + section { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line); }
+:lang(en) { word-break: normal; }
+h1 { margin: 0; font-size: 1.75rem; line-height: 1.35; }
+.sub { margin: 4px 0 0; color: var(--primary); font-size: 1.05rem; font-weight: 600; }
+.meta { margin: 12px 0 0; color: var(--muted); font-size: 0.9rem; }
+.summary {
+  margin: 24px 0 20px;
+  padding: 16px 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+}
+.summary strong { display: block; color: var(--primary); font-size: 1.1rem; }
+h2 { margin: 36px 0 8px; font-size: 1.1rem; line-height: 1.5; color: var(--primary); }
+h3 { margin: 24px 0 4px; font-size: 1rem; }
+p { margin: 8px 0; }
+ul, ol { margin: 8px 0; padding-left: 1.4em; }
+li { margin: 4px 0; }
+a { color: var(--link); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.note { color: var(--muted); }
+.card {
+  display: block;
+  margin: 12px 0;
+  padding: 16px 18px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.card h2 { margin: 0 0 4px; }
+.card p { margin: 0 0 8px; color: var(--muted); }
+footer { margin-top: 48px; color: var(--muted); font-size: 0.9rem; }
+@media (min-width: 720px) {
+  main { padding-top: 56px; }
+  h1 { font-size: 2.1rem; }
+}
